@@ -6,7 +6,7 @@ class ShipmentsController < ApplicationController
   def index
     @shipments = Shipment.all
     if params[:search]
-      @shipments = Shipment.search(params[:search]).order("created_at DESC")
+      @shipments = Shipment.search(params[:search])
     else
       redirect_to root_path
     end
@@ -69,7 +69,7 @@ class ShipmentsController < ApplicationController
   def search
     @shipments = Shipment.all
     if params[:search]
-      @shipments = Shipment.search(params[:search]).order("created_at DESC")
+      @shipments = Shipment.search(params[:search])
     else
       redirect_to root_path
     end
