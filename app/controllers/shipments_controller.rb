@@ -5,11 +5,6 @@ class ShipmentsController < ApplicationController
   # GET /shipments.json
   def index
     @shipments = Shipment.all
-    if params[:search]
-      @shipments = Shipment.search(params[:search])
-    else
-      redirect_to root_path
-    end
   end
 
   # GET /shipments/1
@@ -67,12 +62,7 @@ class ShipmentsController < ApplicationController
   end
 
   def search
-    @shipments = Shipment.all
-    if params[:search]
-      @shipments = Shipment.search(params[:search])
-    else
-      redirect_to root_path
-    end
+    @shipments = Shipment.search(params[:search])
   end
 
   private
