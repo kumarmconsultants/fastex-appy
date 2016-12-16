@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161216012513) do
+ActiveRecord::Schema.define(version: 20161216145701) do
 
   create_table "shipments", force: :cascade do |t|
-    t.string   "trackingNumber"
+    t.string   "trackingnumber"
     t.string   "destination"
     t.string   "status"
-    t.string   "lastScan"
+    t.string   "lastscan"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end

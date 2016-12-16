@@ -18,10 +18,10 @@
   <tbody>
     <% @shipments.each do |shipment| %>
       <tr>
-        <td><%= shipment.trackingNumber %></td>
+        <td><%= shipment.trackingnumber %></td>
         <td><%= shipment.destination %></td>
         <td><%= shipment.status %></td>
-        <td><%= shipment.lastScan %></td>
+        <td><%= shipment.lastscan %></td>
         <td><%= link_to 'Show', shipment %></td>
         <td><%= link_to 'Edit', edit_shipment_path(shipment) %></td>
         <td><%= link_to 'Destroy', shipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
