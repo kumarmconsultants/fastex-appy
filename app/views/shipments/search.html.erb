@@ -4,13 +4,13 @@
 
 
     <% @shipments.each do |shipment| %>
-      <tr>
-        <strong>Tracking Number: </strong> <%= shipment.trackingNumber %>
+
+      <strong>Tracking Number: </strong> <%= shipment.trackingNumber %>
       <strong>Destination: </strong> <%= shipment.destination %>
       <strong>Status: </strong> <%= shipment.status %>
       <strong>Last Scan:</strong> <%= shipment.lastScan %>
 
-      </tr>
+      
     <% end %>
-  
+
 <br>
