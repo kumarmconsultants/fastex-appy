@@ -4,12 +4,7 @@ class ShipmentsController < ApplicationController
   # GET /shipments
   # GET /shipments.json
   def index
-    # @shipments = Shipment.all
-    if params[:search].present?
-      @shipments = Shipment.search(params[:search])
-    else
-      @shipments = Shipment.all
-    end
+    @shipments = Shipment.all
   end
 
   # GET /shipments/1
