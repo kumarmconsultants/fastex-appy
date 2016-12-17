@@ -7,18 +7,22 @@
 <table>
   <thead>
     <tr>
+      <th>Sender's Name</th>
+      <th>Receiver's Name</th>
       <th>Shipped From</th>
       <th>Tracking Number</th>
       <th>Destination</th>
       <th>Status</th>
       <th>Current / Last Known Location</th>
-      <th colspan="3"></th>
+      <th colspan="5"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @shipments.each do |shipment| %>
       <tr>
+        <td><%= shipment.sendername %></td>
+        <td><%= shipment.receivername %></td>
         <td><%= shipment.originlocation %></td>
         <td><%= shipment.trackingnumber %></td>
         <td><%= shipment.destination %></td>

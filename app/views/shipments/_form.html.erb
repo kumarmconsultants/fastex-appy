@@ -12,7 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :status, "Shipped From" %>
+    <%= f.label :sendername, "Sender's Name" %>
+    <%= f.text_field :sendername %>
+  </div>
+
+  <div class="field">
+    <%= f.label :receivername, "Receiver's Name" %>
+    <%= f.text_field :receivername %>
+  </div>
+
+  <div class="field">
+    <%= f.label :originlocation, "Shipped From" %>
     <%= f.text_field :originlocation %>
   </div>
 
