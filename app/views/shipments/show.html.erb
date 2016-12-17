@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Shipped From:</strong>
+  <%= @shipment.originlocation %>
+</p>
+
+<p>
   <strong>Tracking Number:</strong>
   <%= @shipment.trackingnumber %>
 </p>
@@ -16,7 +21,7 @@
 </p>
 
 <p>
-  <strong>Lastscan:</strong>
+  <strong>Current / Last Know Location:</strong>
   <%= @shipment.lastscan %>
 </p>
 
