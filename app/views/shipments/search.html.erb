@@ -4,13 +4,13 @@
 
 
     <% @shipments.each do |shipment| %>
-      <strong>Shipped From: </strong> <%= shipment.originlocation %>
-      <strong>Tracking Number: </strong> <%= shipment.trackingnumber %>
-      <strong>Destination: </strong> <%= shipment.destination %>
-      <strong>Status: </strong> <%= shipment.status %>
-      <strong>Current/Last Known Location:</strong> <%= shipment.lastscan %>
-
+    <p><strong>Shipped From: </strong> <%= shipment.originlocation %> </p>
+    <p>  <strong>Tracking Number: </strong> <%= shipment.trackingnumber %></p>
+    <p>  <strong>Destination: </strong> <%= shipment.destination %></p>
+    <p>  <strong>Status: </strong> <%= shipment.status %></p>
+    <p>  <strong>Current/Last Known Location:</strong> <%= shipment.lastscan %></p>
 
     <% end %>
 
 <br>
+<%= link_to 'Track Another Package', search_path, class: "btn btn-success" %> |  <%= link_to 'Done', root_path, class: "btn btn-primary" %>
