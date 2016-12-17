@@ -28,7 +28,9 @@
         <td><%= shipment.destination %></td>
         <td><%= shipment.status %></td>
         <td><%= shipment.lastscan %></td>
-
+        <td><%= link_to 'Show', shipment %></td>
+        <td><%= link_to 'Edit', edit_shipment_path(shipment) %></td>
+        <td><%= link_to 'Destroy', shipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,9 +38,4 @@
 
 <br>
 
-<%= link_to 'New Shipment', new_shipment_path, class: "btn btn-success" %> <br/>
-<%= link_to 'Show', shipment, class: "btn btn-primary" %><br/>
-<%= link_to 'Edit', edit_shipment_path(shipment), class: "btn btn-default" %><br/>
-<%= link_to 'Destroy', shipment, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %> <br/>
-
-<br/>
+<%= link_to 'New Shipment', new_shipment_path %>
