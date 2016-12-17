@@ -77,6 +77,6 @@ class ShipmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shipment_params
-      params.require(:shipment).permit(:trackingnumber, :destination, :status, :lastscan)
+      params.require(:shipment).permit(:trackingnumber, :destination, :status, :lastscan, :originlocation)
     end
 end

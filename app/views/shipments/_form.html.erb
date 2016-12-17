@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :status, "Shipped From" %>
+    <%= f.text_field :originlocation %>
+  </div>
+
+  <div class="field">
     <%= f.label :trackingnumber, 'Tracking Number' %>
     <%= f.text_field :trackingnumber %>
   </div>

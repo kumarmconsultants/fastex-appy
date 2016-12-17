@@ -4,7 +4,7 @@
 
 
     <% @shipments.each do |shipment| %>
-
+      <strong>Shipped From: </strong> <%= shipment.originlocation %>
       <strong>Tracking Number: </strong> <%= shipment.trackingnumber %>
       <strong>Destination: </strong> <%= shipment.destination %>
       <strong>Status: </strong> <%= shipment.status %>
